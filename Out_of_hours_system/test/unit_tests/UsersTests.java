@@ -1,9 +1,8 @@
-package out_of_hours_core;
+package unit_tests;
 
 
 import java.util.*;
 import out_of_hours_core.*;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,13 +13,12 @@ import out_of_hours_core.*;
  *
  * @author Skenn
  */
-public class Tests {
+public class UsersTests {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         try
         {
             SingleSignOn aSSO = new SingleSignOn(12345678);

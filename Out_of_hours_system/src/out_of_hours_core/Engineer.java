@@ -13,11 +13,13 @@ import java.util.*;
  * 
  * @author Skenn
  */
-public class Engineer {
+public class Engineer implements java.io.Serializable
+{
     
     // Instance Variables
     private int shiftsAvailable;
-    private int shiftsAssigned;
+    private int firstLineShiftsAssigned;
+    private int escalationShiftsAssigned;
     private boolean isEscalation;
     private boolean isFirstLine;
     private User user;
@@ -32,7 +34,8 @@ public class Engineer {
     {
         this.isEscalation = isEscalation;
         this.isFirstLine = isFirstLine;
-        this.shiftsAssigned = 0;
+        this.firstLineShiftsAssigned = 0;
+        this.escalationShiftsAssigned = 0;
         this.shiftsAvailable = 0;
         this.user = aUser;
     }
@@ -66,14 +69,22 @@ public class Engineer {
     }
     
     /**
-     * Returns the number of shifts the receiver has been assigned.
-     * @return number of shifts the receiver has been assigned.
+     * Returns the number of first line shifts the receiver has been assigned.
+     * @return number of first line shifts the receiver has been assigned.
      */
-    protected int getShiftsAssigned()
+    protected int getFirstLineShiftsAssigned()
     {
-        return this.shiftsAssigned;
+        return this.firstLineShiftsAssigned;
     }
 
+    /**
+     * Returns the number of escalation shifts the receiver has been assigned.
+     * @return number of escalation shifts the receiver has been assigned.
+     */
+    protected int getEscalationShiftsAssigned()
+    {
+        return this.escalationShiftsAssigned;
+    }
     // Setters
     /**
      * Sets the isEscalation variable for the receiver.
@@ -111,20 +122,36 @@ public class Engineer {
     }
     
     /**
-     * Increments the shiftsAssigned variable for the receiver.
+     * Increments the FirstLineShiftsAssigned variable for the receiver.
      */
-    protected void incrementShiftsAssigned()
+    protected void incrementFirstLineShiftsAssigned()
     {
-        this.shiftsAssigned++;
+        this.firstLineShiftsAssigned++;
     }
     
     /**
-     * Decrements the shiftsAssigned variable for the receiver.
+     * Decrements the FirstLineShiftsAssigned variable for the receiver.
      */
-    protected void decrementShiftsAssigned()
+    protected void decrementFirstLineShiftsAssigned()
     {
-        this.shiftsAssigned--;
+        this.firstLineShiftsAssigned--;
     }     
+    
+    /**
+     * Increments the EscalationShiftsAssigned variable for the receiver.
+     */
+    protected void incrementEscalationShiftsAssigned()
+    {
+        this.escalationShiftsAssigned++;
+    }
+    
+    /**
+     * Decrements the EscalationShiftsAssigned variable for the receiver.
+     */
+    protected void decrementEscalationShiftsAssigned()
+    {
+        this.escalationShiftsAssigned--;
+    }    
     
     /**
      * Returns a string the represents the engineer

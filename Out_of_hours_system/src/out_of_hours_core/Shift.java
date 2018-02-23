@@ -35,7 +35,7 @@ public class Shift implements Comparable<Shift>
      * Returns the start date of the receiver.
      * @return 
      */
-    protected Date getStartDate()
+    public Date getStartDate()
     {
         return this.startDate;
     }
@@ -44,7 +44,7 @@ public class Shift implements Comparable<Shift>
      * Returns the first line engineer of the receiver.
      * @return 
      */
-    protected Engineer getFirstLineEngineer()
+    public Engineer getFirstLineEngineer()
     {
         return this.firstLineEngineer;
     }
@@ -53,7 +53,7 @@ public class Shift implements Comparable<Shift>
      * Returns the escalation engineer of the receiver.
      * @return 
      */
-    protected Engineer getEscalationEngineer()
+    public Engineer getEscalationEngineer()
     {
         return this.escalationEngineer;
     }
@@ -62,7 +62,7 @@ public class Shift implements Comparable<Shift>
      * Returns the date that the shift will end.
      * @return 
      */
-    protected Date getEndDate()
+    public Date getEndDate()
     {
         // Clone the date so we don't overwrite the startDate.
         Date endDate = (Date) startDate.clone();
@@ -109,13 +109,13 @@ public class Shift implements Comparable<Shift>
                 {
                     bestChoice = aEngineer;
                 }    
-                else if (aEngineer.getShiftsAssigned() < bestChoice.getShiftsAssigned())
+                else if (aEngineer.getEscalationShiftsAssigned() < bestChoice.getEscalationShiftsAssigned())
                 {
                     bestChoice = aEngineer;
                 }
             }
             this.escalationEngineer = bestChoice;
-            this.escalationEngineer.incrementShiftsAssigned();
+            this.escalationEngineer.incrementEscalationShiftsAssigned();
         }
     }
     
@@ -141,13 +141,13 @@ public class Shift implements Comparable<Shift>
                 {
                     bestChoice = aEngineer;
                 }    
-                else if (aEngineer.getShiftsAssigned() < bestChoice.getShiftsAssigned())
+                else if (aEngineer.getFirstLineShiftsAssigned() < bestChoice.getFirstLineShiftsAssigned())
                 {
                     bestChoice = aEngineer;
                 }
             }
             this.firstLineEngineer = bestChoice;
-            this.firstLineEngineer.incrementShiftsAssigned();
+            this.firstLineEngineer.incrementFirstLineShiftsAssigned();
         }
     }
     
@@ -232,7 +232,7 @@ public class Shift implements Comparable<Shift>
      * Assigns the most suitable first line engineer and escalation
      * engineer to the shift.
      */
-    protected void assignEngineers()
+    public void assignEngineers()
     {
         this.setEscalationEngineer();
         this.setFirstLineEngineer();

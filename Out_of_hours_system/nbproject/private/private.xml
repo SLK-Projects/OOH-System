@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Skenn/Documents/GitHub/OOH-System/Out_of_hours_system/src/out_of_hours_gui/LoginScreen.java</file>
+            <file>file:/C:/Users/Skenn/Documents/GitHub/OOH-System/Out_of_hours_system/src/out_of_hours_core/Manager.java</file>
+            <file>file:/C:/Users/Skenn/Documents/GitHub/OOH-System/Out_of_hours_system/src/out_of_hours_core/User.java</file>
+            <file>file:/C:/Users/Skenn/Documents/GitHub/OOH-System/Out_of_hours_system/src/out_of_hours_core/SingleSignOn.java</file>
+            <file>file:/C:/Users/Skenn/Documents/GitHub/OOH-System/Out_of_hours_system/src/out_of_hours_core/OohCoord.java</file>
+            <file>file:/C:/Users/Skenn/Documents/GitHub/OOH-System/Out_of_hours_system/src/unit_tests/LoginTest.java</file>
+            <file>file:/C:/Users/Skenn/Documents/GitHub/OOH-System/Out_of_hours_system/src/unit_tests/UsersTests.java</file>
+        </group>
+    </open-files>
 </project-private>

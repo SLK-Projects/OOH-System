@@ -60,7 +60,7 @@ public class User implements java.io.Serializable
      * Returns the users name.
      * @return the full name of the user.
      */
-    protected String getName()
+    public String getName()
     {
         return this.name;
     }
@@ -69,7 +69,7 @@ public class User implements java.io.Serializable
      * Returns the phone number of the receiver.
      * @return Phone number of the user.
      */
-    protected String getPhoneNumber()
+    public String getPhoneNumber()
     {
         return this.phoneNumber;
     }
@@ -78,7 +78,7 @@ public class User implements java.io.Serializable
      * Returns the email of the receiver.
      * @return Email address of the user.
      */
-    protected String getEmail()
+    public String getEmail()
     {
         return this.email;
     }
@@ -96,7 +96,7 @@ public class User implements java.io.Serializable
      * Return the password of the receiver.
      * @return 
      */
-    protected String getPassword()
+    public String getPassword()
     {
         return this.password;
     }

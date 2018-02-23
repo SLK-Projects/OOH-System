@@ -10,8 +10,8 @@ import java.util.*;
  * The Manager class represents an out of hours rota manager.
  * @author Skenn
  */
-public class Manager {
-   
+public class Manager implements java.io.Serializable
+{
     // Instance variables
     private final String DEFAULT_PASSWORD = "password";
     /**
@@ -32,7 +32,7 @@ public class Manager {
      * @param isManager - If the new user is a out of hours rota manager.
      * @return a new User object.
      */
-    protected User CreateUser(String aName, String aPhoneNumber, String aEmail, SingleSignOn aSSO,
+    public User CreateUser(String aName, String aPhoneNumber, String aEmail, SingleSignOn aSSO,
                                boolean isEscalation, boolean isFirstLine, boolean isManager)
     {
         User aUser = new User(aName, aPhoneNumber, aEmail, DEFAULT_PASSWORD, 
